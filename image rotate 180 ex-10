@@ -1,0 +1,6 @@
+import cv2
+path=r"C:/Users/naras/OneDrive/Pictures/Screenshots/Screenshot 2024-02-01 205633.png"
+img=cv2.imread(path)
+image = cv2.rotate(img, cv2.ROTATE_180)
+cv2.imshow("image",image)
+cv2.Waitkey(0)
