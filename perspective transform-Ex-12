@@ -1,0 +1,10 @@
+import cv2
+import numpy as np
+img=cv2.imread("C:/Users/naras/OneDrive/Pictures/Screenshots/Screenshot 2024-02-01 205633.png")
+row,col,ch=img.shape
+pts1=np.float32([[50,100],[60,23],[30,50],[60,20]])
+pts2=np.float32([[23,40],[45,34],[10,100],[50,50]])
+m=cv2.getPerspectiveTransform(pts1,pts2)
+dts=cv2.warpPerspective(img,m,(col,row))
+cv2.imshow("perspective image",dts)
+cv2.Waitkey(0)
