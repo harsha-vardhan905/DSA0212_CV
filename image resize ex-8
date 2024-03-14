@@ -1,0 +1,9 @@
+import cv2
+import numpy as np
+kernel=np.ones((5,5),np.uint8)
+print (kernel)
+path="C:/Users/naras/OneDrive/Pictures/Screenshots/Screenshot 2024-02-01 205633.png"
+img= cv2.imread(path)
+imgresize=cv2.resize(img,(600,600))
+cv2.imshow("imgresize",imgresize)
+cv2.Waitkey(0)
